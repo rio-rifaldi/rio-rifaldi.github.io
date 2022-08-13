@@ -1,14 +1,14 @@
 let root = document.querySelector('html');
 let body = document.querySelector('body');
 let header_h1 = body.querySelector(".container .header h1");
-let header_h2 = body.querySelector('.container .header h2');
+let header_h2 = body.querySelector('.container .header .typing');
 let card = body.querySelectorAll('.container .card-wrapping .card')
 
 let checkbox = body.querySelector('.toogle input');
 let sun = body.querySelector('.toogle .sun');
 let moon = body.querySelector('.toogle .moon')
 
-let cardHeader = body.querySelectorAll('.container .card-wrapping .card h1');
+let cardHeader = body.querySelectorAll('.container .card-wrapping .card .head');
 
 
 

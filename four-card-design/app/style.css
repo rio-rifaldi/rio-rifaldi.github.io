@@ -106,10 +106,10 @@ body{
     font-weight: 200;
     text-align: center;
 }
-.container .header h1.typing{
+/* .container .header .typing{
     font-weight: 600;
     font-size: 1.5rem;
-}
+} */
 .container .header p{
     color: var(--Grayish-Blue);
     font-size: 1rem;
@@ -117,7 +117,7 @@ body{
 }
 
 /* ----------------------------- typing animation header  --------------------------- */
-    .container .header  .typing{
+    .container .header .typing{
         position: relative;
         width: max-content;
         margin: 0 auto;
@@ -132,12 +132,13 @@ body{
         bottom: 0;
         right: 0;
         left: 0;
+
     }
-    .container .header h1::before{
-        background-color: var(--bg-typing);
+    .container .header .typing::before{
+        /* background-color: var(--bg-typing); */
         animation: typing 1.8s steps(22) forwards 1.4s;
     }
-    .container .header h1::after{
+    .container .header .typing::after{
         opacity: 0;
         width: .12rem; 
         background-color: var(--bg-cursor);
