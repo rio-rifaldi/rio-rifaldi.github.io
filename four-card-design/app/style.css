@@ -7,7 +7,7 @@
     --Orange: hsl(34, 97%, 64%);
     --Blue: hsl(212, 86%, 64%);
     --Very-Dark-Blue: hsl(234, 12%, 34%);
-    --Grayish-Blue: hsl(229, 6%, 66%);
+    --Grayish-Blue: hsl(228, 4%, 47%);
     --Very-Light-Gray: hsl(0, 0%, 98%);
     --bg-typing : white;
     --bg-cursor : black;
@@ -57,9 +57,20 @@ body{
         margin: 1.2rem 2.2rem;
     }
     .toogle .sun{
-       visibility: visible;
-    }
-    .toogle #check{          
+        visibility: visible;
+      
+    
+    } 
+     .toogle .sun:focus{
+        border: 1px solid black;
+     }
+     .toogle #check:focus ~ .sun{
+            border: 1px solid black;
+     }
+     .toogle #check:focus ~ .moon{
+        border: 1px solid white;
+     }
+    .toogle #check , .toogle label{          
         position: absolute;
         top: 0;
         right: 0;
@@ -67,9 +78,11 @@ body{
        height: 2.5rem;
        width: 2.5rem;
        opacity: 0;
+       z-index: 10;
        cursor: pointer;
         
     }
+    
     .toogle{margin-bottom: 5rem;}
              /* >>--------------------- ---- ---------------------<<  */ 
     
@@ -175,7 +188,7 @@ body{
 .container .card-wrapping .card img{
     margin-top: 3.5rem;
     float: right;
-    width: 4.5rem;
+    /* width: 4.5rem; */
     transition: all .4s;
 }
 
