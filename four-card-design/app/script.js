@@ -20,8 +20,8 @@ checkbox.addEventListener('click', (args) => {
         moon.style.visibility = "visible";
         moon.children[0].style.fill = "#ffffff"
         body.style.backgroundColor = "#21213d"
-        header_h1.style.setProperty("--bg-typing","#21213d");
-        header_h1.style.setProperty("--bg-cursor","#ffffff");
+        header_h2.style.setProperty("--bg-typing","#21213d");
+        header_h2.style.setProperty("--bg-cursor","#ffffff");
         header_h1.style.color = "white"
         header_h2.style.color = "white"
         cardHeader.forEach(e => {e.style.color ="#ffffff"});
@@ -30,8 +30,8 @@ checkbox.addEventListener('click', (args) => {
 
     }else{
         cardHeader.forEach(e => {e.style.color ="#000"})
-        header_h1.style.setProperty("--bg-typing","#ffffff")
-        header_h1.style.setProperty("--bg-cursor","#000000")
+        header_h2.style.setProperty("--bg-typing","#ffffff")
+        header_h2.style.setProperty("--bg-cursor","#000000")
         header_h1.style.color = "black"
         header_h2.style.color = "black"
         body.style.backgroundColor = "#ffffff"

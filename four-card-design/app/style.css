@@ -61,15 +61,8 @@ body{
       
     
     } 
-     .toogle .sun:focus{
-        border: 1px solid black;
-     }
-     .toogle #check:focus ~ .sun{
-            border: 1px solid black;
-     }
-     .toogle #check:focus ~ .moon{
-        border: 1px solid white;
-     }
+
+
     .toogle #check , .toogle label{          
         position: absolute;
         top: 0;
@@ -106,10 +99,10 @@ body{
     font-weight: 200;
     text-align: center;
 }
-/* .container .header .typing{
+.container .header .typing{
     font-weight: 600;
     font-size: 1.5rem;
-} */
+}
 .container .header p{
     color: var(--Grayish-Blue);
     font-size: 1rem;
@@ -135,7 +128,7 @@ body{
 
     }
     .container .header .typing::before{
-        /* background-color: var(--bg-typing); */
+        background-color: var(--bg-typing);
         animation: typing 1.8s steps(22) forwards 1.4s;
     }
     .container .header .typing::after{
