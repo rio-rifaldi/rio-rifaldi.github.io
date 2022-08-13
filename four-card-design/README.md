@@ -18,9 +18,9 @@ this is challenge that challenged my [frontendmentor.io](https://www.frontendmen
      <img src="./images/Screenshot%20from%202022-08-13%2008-44-15.png" alt="gif of darkmode" width ="850" style = "margin: 1px auto; display:block;">
 
      #### accessibility keyword ⌨️
-     - Alt + Shift + D  : change color theme
-     - Alt + Shift + F  : go to frontendmentor.io
-     - Alt + Shift + R  : go to my github repository
+     - Alt + Shift + D  : change color theme 🌔
+     - Alt + Shift + F  : go to frontendmentor.io 💻
+     - Alt + Shift + R  : go to my github repository 🖥️
   
 
 

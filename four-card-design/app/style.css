@@ -102,11 +102,11 @@ body{
     max-width: 30rem;
 
 }
-.container .header h2{
+.container .header h1:first-child{
     font-weight: 200;
     text-align: center;
 }
-.container .header h1{
+.container .header h1.typing{
     font-weight: 600;
     font-size: 1.5rem;
 }
@@ -117,15 +117,15 @@ body{
 }
 
 /* ----------------------------- typing animation header  --------------------------- */
-    .container .header h1{
+    .container .header  .typing{
         position: relative;
         width: max-content;
         margin: 0 auto;
         letter-spacing: .1rem;
 
     }
-    .container .header h1::after,
-    .container .header h1::before{
+    .container .header .typing::after,
+    .container .header .typing::before{
         content: '';
         position: absolute;
         top: 0;
@@ -174,12 +174,12 @@ body{
 
     
 }
-.container .card-wrapping .card h1{
+.container .card-wrapping .card .head{
     font-weight: 600;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
 
 }
-.container .card-wrapping .card p{
+.container .card-wrapping .card p:not(.head){
     color: var(--Grayish-Blue);
     font-size: 1rem;
     margin: .2rem 0;
