@@ -4,7 +4,8 @@
 <br>
 <div style='max-width: 900px; margin: auto;'>
 
-![darkMode](./gif/darkmode.gif) 
+<!-- ![darkMode](./gif/darkmode.gif)  -->
+<img src="./gif/darkmode.gif" alt="gif of darkmode" width ="700">
 </div> 
 
 - ## Responsive design
