@@ -8,7 +8,7 @@ this is challenge that challenged my [frontendmentor.io](https://www.frontendmen
 - ### DarkMode 🌔 ☀️ & typing + fade effect
   <br>
 
-  <img src="./gif/darkmode.gif" alt="gif of darkmode" width ="850" style = "margin: 1px auto; display:block;">
+  <img src="./gif/darkmode.gif" alt="gif of darkmode">
 
 - ### Responsive design 📱
   <br>
