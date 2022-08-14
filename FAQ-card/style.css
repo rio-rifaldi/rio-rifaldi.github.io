@@ -14,18 +14,19 @@
     --z-index-main :10;
     --z-index-secondary :5;
     --z-index-lowest : 1;
+    overflow-x: hidden;
 
 }
 
 
 body{
     width: 100%;
-    min-height: 100vh;
+    min-height: 135vh;
     display: grid;
     place-items: center;
     background-image: var(--background);
+    background-repeat: no-repeat;
     font-family: 'Kumbh Sans', sans-serif;
-    overflow-x: hidden;
 }
 
             /* setting up the container faq */
@@ -232,7 +233,7 @@ li.item:is(.active) > .item-summary section.detail{
         /* setting up scrollbar style */
 
 @media screen and (min-width: 1110px){
-
+    body{min-height: 100vh;}
     .text-container .item-text-container{
         overflow-y: auto;
         height: 33rem;
@@ -280,7 +281,6 @@ li.item:is(.active) > .item-summary section.detail{
     font-size: var(--font-size-description);
     color: var(--Very-dark-desaturated-blue);
     font-weight: 500;
-    font-family: cursive;
     margin-bottom: 3rem;
     text-align: center;
 }
@@ -290,13 +290,14 @@ li.item:is(.active) > .item-summary section.detail{
 #form{
     
     display:none;
+    
 }
 #form form{
     display: flex;
     flex-direction: column;
     gap: 2rem;
     /* position: relative; */
-    font-family: cursive;
+    font-family: 'Kumbh Sans', sans-serif;
     
 }
 
@@ -410,14 +411,14 @@ li.item:is(.active) > .item-summary section.detail{
     position: absolute;
     z-index: 100;
     place-self: start end;
-    display: flex;
+    visibility: hidden;
     align-items: center;
     text-align: center;
     margin: 1rem;
     max-width: 30rem;
     padding: 1rem ;
     border-radius: 1rem;
-    transform: translateX(35rem);
+
     transition: all .4s ease;
 
     /* animation: showing 1.2s 1 forwards .6s,
@@ -428,6 +429,7 @@ li.item:is(.active) > .item-summary section.detail{
 .thanks .image img{
     width: 6rem;
     margin-left: 2rem;
+    float: right;
     
 }
 .thanks .text{order: 1;}
@@ -454,12 +456,14 @@ li.item:is(.active) > .item-summary section.detail{
 
 @keyframes showing {
     to{
-        transform: translateX(-1rem);
+    transform: scale(1.06);
+      visibility: visible;
     }
 }
 @keyframes hide {
     to{
-        transform: translateX(35rem);
+        transform: scale(.001) ;
+        visibility: hidden;
     }
     
 }
