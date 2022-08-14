@@ -70,29 +70,29 @@ body {
   border-radius: 0.7rem;
   position: relative;
 }
-.container .form form div {
+.container .form form label {
   position: relative;
 }
-.container .form form div input {
+.container .form form label input {
   width: 100%;
   font-size: clamp(1.3rem, 1.1288rem + 0.1899vw, 1.4rem);
   padding: 1rem 2.2rem;
   border-radius: 0.5rem;
   border: 1.4px solid rgba(128, 128, 128, 0.25);
 }
-.container .form form div input::placeholder {
+.container .form form label input::placeholder {
   font-weight: 600;
-  color: rgba(128, 128, 128, 0.5);
+  color: rgba(128, 128, 128, 0.7);
   font-size: 1.2rem;
 }
-.container .form form div input:focus {
+.container .form form label input:focus {
   outline: 1.2px solid black;
 }
-.container .form form div input:not(:placeholder-shown):invalid ~ p {
+.container .form form label input:not(:placeholder-shown):invalid ~ p {
   max-height: 1.3rem;
   opacity: 1;
 }
-.container .form form div p {
+.container .form form label p {
   color: hsl(0deg, 100%, 74%);
   text-align: right;
   font-size: 1rem;
@@ -103,20 +103,20 @@ body {
   opacity: 0;
   pointer-events: none;
 }
-.container .form form div .error {
+.container .form form label .error {
   position: absolute;
   right: 1.8rem;
   top: 1.3rem;
   display: none;
 }
-.container .form form div .eye {
+.container .form form label .eye {
   position: absolute;
   top: 1.2rem;
   right: 1.8rem;
   width: 2.5rem;
   cursor: pointer;
 }
-.container .form form div input[type=checkbox] {
+.container .form form label input[type=checkbox] {
   height: 3rem;
   width: 3rem;
   position: absolute;
@@ -126,18 +126,18 @@ body {
   opacity: 0;
   cursor: pointer;
 }
-.container .form form div input[type=checkbox]:checked ~ .close {
+.container .form form label input[type=checkbox]:checked ~ .close {
   display: none;
 }
-.container .form form div input[type=checkbox]:not(:checked) ~ .open {
+.container .form form label input[type=checkbox]:not(:checked) ~ .open {
   display: none;
 }
-.container .form form div input#password:not(:placeholder-shown) ~ ul {
+.container .form form label input#password:not(:placeholder-shown) ~ ul {
   max-height: 5rem;
   opacity: 1;
   pointer-events: all;
 }
-.container .form form div ul {
+.container .form form label ul {
   list-style-type: none;
   margin: 1rem;
   font-size: clamp(1.5rem, 1.4595rem + 0.1081vw, 1.6rem);
@@ -148,7 +148,7 @@ body {
   opacity: 0;
   pointer-events: none;
 }
-.container .form form div ul li::after {
+.container .form form label ul li::after {
   transform: translate(0.5rem, 0.3rem);
   content: var(--icon-error);
   display: inline-block;
@@ -177,17 +177,20 @@ body {
   text-align: center;
   font-size: 1.15rem;
   font-weight: 500;
-  color: hsl(246deg, 25%, 77%);
+  color: hsl(253deg, 6%, 47%);
   line-height: 2.2rem;
 }
 .container .form form p span {
+  background-color: transparent;
   color: hsl(0deg, 100%, 74%);
   font-size: 1.15rem;
   font-weight: 700;
 }
 .container footer {
+  text-align: center;
   position: absolute;
-  bottom: 3rem;
+  left: 0;
+  right: 0;
 }
 .container footer p {
   font-size: 1.2rem;
@@ -285,6 +288,11 @@ body::-webkit-scrollbar {
   .container .form {
     margin: 0;
     width: 88%;
+  }
+  .container footer {
+    left: unset;
+    right: unset;
+    bottom: 0;
   }
   dialog.modal {
     max-width: 72rem;
