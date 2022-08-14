@@ -1,0 +1,194 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;600;700&display=swap');
+
+$Blue: hsl(223, 87%, 63%);
+$Pale-Blue: hsl(0, 0%, 68%);
+$Light-Red: hsl(354, 100%, 66%);
+$Gray: hsl(0, 0%, 59%);
+$Very-Dark-Blue: hsl(209, 33%, 12%);
+
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-size: 62.5%;
+        font-family: 'Libre Franklin', sans-serif;
+    }
+    body{
+        display: grid;
+        min-height: 100vh;
+        place-items: center ;
+    }
+    .container{
+        padding: 3rem;
+        max-width: 80rem;
+        margin: 4rem 0;
+
+        .text{
+            text-align: center;
+            img{width: 7rem; margin-bottom: 1.5rem;}
+            h2{
+                font-size: clamp(2.5rem, 1.8919rem + 1.6216vw, 4rem);
+                font-weight: 300;
+                color: $Gray;
+                margin: 2rem 0;
+                mark{
+                    background-color: transparent;
+                    font-weight: 700;
+                    font-size: clamp(2.5rem, 1.8919rem + 1.6216vw, 4rem);
+                    color: $Very-Dark-Blue;
+                }
+            }
+
+            p{
+                font-size: 1.4rem;
+                font-weight: 300;
+
+            }
+        }
+
+        form{
+
+            margin: 3rem auto; 
+            text-align: center;
+
+
+            input{
+                
+                font-size: 1.7rem;
+                padding: 1rem 3rem;
+                border-radius: 4rem;
+                width: 100%;
+                border: 1.8px solid $Pale-Blue;
+                font-weight: 300;
+                transition: display .5s ease;
+                &:focus{
+                    outline: none;
+                }
+                
+                &::placeholder{
+                    color: rgba($color: $Gray, $alpha: .6);
+                    font-weight: 500;
+                    font-size: 1.6rem;
+                }
+                &:invalid:focus{
+                    outline: none;
+                    border: 1.7px solid red;
+                    color: $Light-Red;
+                }
+                &:valid{
+                    outline: none;
+                    border: 1.7px solid green;
+                    color: green;
+                }
+                
+                &:not(:placeholder-shown):invalid + p{
+                    opacity: 1;
+                    height: .3rem;
+                }
+
+            }
+            p{
+                opacity: 0;
+                transition: all .5s ease;
+                max-height: 0;
+                font-size: 1rem;
+                color: $Light-Red;
+                margin:.4rem 0 2.5rem 0;
+                font-weight: 600;
+                text-transform: capitalize;
+            }
+            
+                    button{
+                        display: block;
+                        width: 100%;
+                        background-color: $Blue;
+                        font-size: 1.3rem;
+                        color: white;
+                        font-weight: 600;
+                        border: none;
+                        box-shadow: 0px 2px 20px 0px hsl(223deg 100% 88%);; 
+                        padding: 1.3rem 4rem;
+                        border-radius: 3rem;
+                        margin: .7rem auto 1rem auto;
+        
+                        &:focus{outline: none;}
+                        
+                    }
+
+            @media screen and (min-width : 768px ){
+                &{
+                    display: flex;
+              
+                       justify-content: center;
+                       gap: 2rem;
+            
+                       input{
+                        width: 50rem;
+                        margin: 0;
+                       }
+                       button{
+                        margin: 0;
+                        width: 18rem;
+                        height: 4.5rem;
+                        transition: all .3s ease;
+                        &:hover{
+                            background-color: rgba($color: $Blue, $alpha: .7);
+                            cursor: pointer;
+                        }
+                        &:focus{
+                            background-color: rgba($color: $Blue, $alpha: .7);
+
+                        }
+                       }
+                }
+            
+                 
+            }
+        }
+        .image{
+            display: flex;
+            justify-content: center;
+            margin: 6rem 0;
+            img{width: 80%;}
+        }
+
+        .footer{
+            margin-top: 10rem;
+
+            .icon{
+                display: flex;
+                gap: 3rem;
+                justify-content: center;
+             
+                .wrap{
+                    cursor: pointer;
+                    padding: .8rem;
+                    border-radius: 4rem;
+                    transition: all .4s ease;
+                    border: 1px solid rgba($color: black, $alpha: .1);
+                    svg{
+                        width: 2rem;
+                       
+                    }
+                    &:hover{
+                        background-color: $Blue;
+                        svg{
+                            path{
+                                fill: white;
+                            }
+                        }
+
+                    }
+                  
+
+
+                }
+            }
+            p{  
+                margin: 2.5rem;
+                font-size: 1.2rem;
+                text-align: center;
+                color: $Gray;
+            }
+        }
+    }

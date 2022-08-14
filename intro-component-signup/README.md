@@ -15,5 +15,5 @@ this is a project that chalenged by [frontendmentor.io](https://www.frontendment
     <img src="./gif_image/gif-modal-box.gif" max-width ="850" alt="box modal message">
 
 
-i hope you enjoy my project
-thank you ✋
+### i hope you enjoy my project
+### thank you ✋

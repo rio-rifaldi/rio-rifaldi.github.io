@@ -1,0 +1,168 @@
+@import url("https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 62.5%;
+  font-family: "Libre Franklin", sans-serif;
+}
+
+body {
+  display: grid;
+  min-height: 100vh;
+  place-items: center;
+}
+
+.container {
+  padding: 3rem;
+  max-width: 80rem;
+  margin: 4rem 0;
+}
+.container .text {
+  text-align: center;
+}
+.container .text img {
+  width: 7rem;
+  margin-bottom: 1.5rem;
+}
+.container .text h2 {
+  font-size: clamp(2.5rem, 1.8919rem + 1.6216vw, 4rem);
+  font-weight: 300;
+  color: hsl(0deg, 0%, 59%);
+  margin: 2rem 0;
+}
+.container .text h2 mark {
+  background-color: transparent;
+  font-weight: 700;
+  font-size: clamp(2.5rem, 1.8919rem + 1.6216vw, 4rem);
+  color: hsl(209deg, 33%, 12%);
+}
+.container .text p {
+  font-size: 1.4rem;
+  font-weight: 300;
+}
+.container form {
+  margin: 3rem auto;
+  text-align: center;
+}
+.container form input {
+  font-size: 1.7rem;
+  padding: 1rem 3rem;
+  border-radius: 4rem;
+  width: 100%;
+  border: 1.8px solid hsl(0deg, 0%, 68%);
+  font-weight: 300;
+  transition: display 0.5s ease;
+}
+.container form input:focus {
+  outline: none;
+}
+.container form input::placeholder {
+  color: rgba(150, 150, 150, 0.6);
+  font-weight: 500;
+  font-size: 1.6rem;
+}
+.container form input:invalid:focus {
+  outline: none;
+  border: 1.7px solid red;
+  color: hsl(354deg, 100%, 66%);
+}
+.container form input:valid {
+  outline: none;
+  border: 1.7px solid green;
+  color: green;
+}
+.container form input:not(:placeholder-shown):invalid + p {
+  opacity: 1;
+  height: 0.3rem;
+}
+.container form p {
+  opacity: 0;
+  transition: all 0.5s ease;
+  max-height: 0;
+  font-size: 1rem;
+  color: hsl(354deg, 100%, 66%);
+  margin: 0.4rem 0 2.5rem 0;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+.container form button {
+  display: block;
+  width: 100%;
+  background-color: hsl(223deg, 87%, 63%);
+  font-size: 1.3rem;
+  color: white;
+  font-weight: 600;
+  border: none;
+  box-shadow: 0px 2px 20px 0px hsl(223deg, 100%, 88%);
+  padding: 1.3rem 4rem;
+  border-radius: 3rem;
+  margin: 0.7rem auto 1rem auto;
+}
+.container form button:focus {
+  outline: none;
+}
+@media screen and (min-width: 768px) {
+  .container form {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+  }
+  .container form input {
+    width: 50rem;
+    margin: 0;
+  }
+  .container form button {
+    margin: 0;
+    width: 18rem;
+    height: 4.5rem;
+    transition: all 0.3s ease;
+  }
+  .container form button:hover {
+    background-color: rgba(79, 125, 243, 0.7);
+    cursor: pointer;
+  }
+  .container form button:focus {
+    background-color: rgba(79, 125, 243, 0.7);
+  }
+}
+.container .image {
+  display: flex;
+  justify-content: center;
+  margin: 6rem 0;
+}
+.container .image img {
+  width: 80%;
+}
+.container .footer {
+  margin-top: 10rem;
+}
+.container .footer .icon {
+  display: flex;
+  gap: 3rem;
+  justify-content: center;
+}
+.container .footer .icon .wrap {
+  cursor: pointer;
+  padding: 0.8rem;
+  border-radius: 4rem;
+  transition: all 0.4s ease;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+.container .footer .icon .wrap svg {
+  width: 2rem;
+}
+.container .footer .icon .wrap:hover {
+  background-color: hsl(223deg, 87%, 63%);
+}
+.container .footer .icon .wrap:hover svg path {
+  fill: white;
+}
+.container .footer p {
+  margin: 2.5rem;
+  font-size: 1.2rem;
+  text-align: center;
+  color: hsl(0deg, 0%, 59%);
+}
+
+/*# sourceMappingURL=style.css.map */
