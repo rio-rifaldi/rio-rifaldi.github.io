@@ -9,10 +9,10 @@ this is a project that chalenged by [frontendmentor.io](https://www.frontendment
     <img src="./images/Screenshot%20from%202022-08-14%2016-23-32.png" alt="prevent blank fill" width ="850">
     
 - ### password validation
-    <img src="./gif_image/gif-password.gif" width ="850" alt="password validation">
+    <img src="./gif_image/gif-password.gif" max-width ="850" alt="password validation">
 
 - ### modal box message
-    <img src="./gif_image/gif-modal-box.gif" width ="850" alt="box modal message">
+    <img src="./gif_image/gif-modal-box.gif" max-width ="850" alt="box modal message">
 
 
 i hope you enjoy my project
