@@ -290,6 +290,9 @@ dialog.modal{
         &:hover{
             background-color: rgb(0, 220, 0);
         }
+        &:focus{
+            background-color: rgb(0, 220, 0);
+        }
         
     }
 }
@@ -337,16 +340,17 @@ body::-webkit-scrollbar{
             float: left;
             width: 23rem;
         }
-        h1{
-            margin-top: 3rem;
-        }
         section{
-            display: inline;
+            h1{
+                margin-top: 2rem;
+                font-size: 2rem;
+            }
+            display: inline-block;
             max-width: 30rem;
  
         }
         button{
-            margin-top: 2rem;
+            margin-top: 1rem;
         }
     }
      

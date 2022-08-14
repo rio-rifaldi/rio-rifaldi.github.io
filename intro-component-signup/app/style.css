@@ -260,6 +260,9 @@ dialog.modal button {
 dialog.modal button:hover {
   background-color: rgb(0, 220, 0);
 }
+dialog.modal button:focus {
+  background-color: rgb(0, 220, 0);
+}
 
 body::-webkit-scrollbar {
   width: 0.3rem;
@@ -301,15 +304,16 @@ body::-webkit-scrollbar {
     float: left;
     width: 23rem;
   }
-  dialog.modal h1 {
-    margin-top: 3rem;
-  }
   dialog.modal section {
-    display: inline;
+    display: inline-block;
     max-width: 30rem;
   }
-  dialog.modal button {
+  dialog.modal section h1 {
     margin-top: 2rem;
+    font-size: 2rem;
+  }
+  dialog.modal button {
+    margin-top: 1rem;
   }
 }
 @keyframes fade-in {

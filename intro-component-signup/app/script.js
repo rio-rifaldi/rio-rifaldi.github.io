@@ -81,7 +81,7 @@ form.addEventListener('submit',(e) =>{
 
 });
 password.addEventListener('keyup',(even) => {
-    let li= document.querySelectorAll('.container .form div li');
+    let li= document.querySelectorAll('.container .form label li');
         
          if(containsSomething(even.target.value,"[A-Z]")){
             li[0].style.color = "green";
