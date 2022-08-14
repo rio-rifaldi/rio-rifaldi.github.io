@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="component social landing page">
+    <link rel="stylesheet" href="../node_modules/aos/dist/aos.css" />
+    <link rel="stylesheet" href="style.css">
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Social proof section</title>
+
+  </head>
+  <body>
+    <main class="container">
+      <section class="text-wrap" data-aos="flip" data-aos-anchor=".header">
+        <h1 data-aos="fade" class="header">
+              10,000+ of our users love our products.
+        </h1>
+        <p data-aos="fade" data-aos-delay="200" >
+        We only provide great products combined with excellent customer service.
+            See what our satisfied customers are saying about our services.
+        </p>
+      </section>
+
+      <div class="star-wrap">
+          <section class="review wrap" data-aos="fade-down" data-aos-delay="300" >
+                <div class="stars">
+                  <li><img src="../images/icon-star.svg" alt="icon-star" width="17"></li>
+                  <li><img src="../images/icon-star.svg" alt="icon-star" width="17"></li>
+                  <li><img src="../images/icon-star.svg" alt="icon-star" width="17"></li>
+                  <li><img src="../images/icon-star.svg" alt="icon-star" width="17"></li>
+                  <li><img src="../images/icon-star.svg" alt="icon-star" width="17"></li>
+                </div>
+                <div class="text-content ">
+                  <p>     
+                  Rated 5 Stars in Reviews
+                  </p>
+                </div>
+          </section>
+    
+          <section class="guru wrap" data-aos="fade-down" data-aos-delay="800">
+              <div class="stars">
+                <li><img src="../images/icon-star.svg" alt="icon-star" width="17"></li>
+                <li><img src="../images/icon-star.svg" alt="icon-star" width="17"></li>
+                <li><img src="../images/icon-star.svg" alt="icon-star" width="17"></li>
+                <li><img src="../images/icon-star.svg" alt="icon-star" width="17"></li>
+                <li><img src="../images/icon-star.svg" alt="icon-star" width="17"></li>
+              </div>
+
+              <div class="text-content">
+                <p>
+                      Rated 5 Stars in Report Guru
+                </p>
+              </div>
+          </section>
+
+          <section class="bestTech wrap" data-aos="fade-down" data-aos-delay="1200">
+
+              <div class="stars">
+                <li><img src="../images/icon-star.svg" alt="icon-star" width="17" ></li>
+                <li><img src="../images/icon-star.svg" alt="icon-star" width="17"></li>
+                <li><img src="../images/icon-star.svg" alt="icon-star" width="17"></li>
+                <li><img src="../images/icon-star.svg" alt="icon-star" width="17"></li>
+                <li><img src="../images/icon-star.svg" alt="icon-star" width="17"></li>
+              </div>
+
+              <div class="text-content">
+                <p>
+                      Rated 5 Stars in BestTech
+                </p>
+              </div>
+            
+          </section>
+        </div>
+
+
+      <section class="card-wrap">
+          <div class="card" data-aos="fade-down">
+              <img src="../images/image-colton.jpg" alt="Colton Smith" width="20">
+              
+              <div class="name">
+                <h1>Colton Smith</h1>
+                <h2>Verified Buyer</h2>
+              </div>
+              <p>
+                " We needed the same printed design as the one we had ordered a week prior.
+                Not only did they find the original order, but we also received it in time.
+                Excellent! "
+              </p>
+          </div>
+ 
+
+        <div class="card" data-aos="fade-down" >
+            <img src="../images/image-irene.jpg" alt="irene roberts" width="20">
+            
+            <div class="name">
+              <h1>Irene Roberts</h1>
+              <h2>Verified Buyer</h2>
+            </div>
+            <p>
+              "Customer service is always excellent and very quick turn around. Completely
+               delighted with the simplicity of the purchase and the speed of delivery."
+            </p>
+        </div>
+
+
+        <div class="card" data-aos="fade-down" >
+            <img src="../images/image-anne.jpg" alt="Anne Wallace" width="20">
+            
+            <div class="name">
+              <h1>Anne Wallace</h1>
+              <h2>Verified Buyer</h2>
+            </div>
+            <p>
+              "Put an order with this company and can only praise them for the very high
+              standard. Will definitely use them again and recommend them to everyone!"
+            </p>
+        </div>
+      </section>
+    </main>
+    
+    <script src="../node_modules/aos/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        duration:1000,
+        once: true,
+        delay:100,
+        offset:200,
+
+      });
+      
+      
+    </script>
+  </body>
+</html>

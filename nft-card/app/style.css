@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300&display=swap');
+
+:root{
+    --Very-dark-blue-main-bg : hsl(217, 54%, 11%);
+    --Very-dark-blue-card-BG: hsl(216, 50%, 16%);
+    --Very-dark-blue-line: hsl(215, 32%, 27%);
+    --White: hsl(0, 0%, 100%);
+    --Soft-blue: hsl(215, 51%, 70%);
+    --Cyan: hsl(178, 100%, 50%);
+
+
+}
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+    color: white;
+}
+body{
+    font-family: 'Outfit', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+    background-color: var(--Very-dark-blue-main-bg);
+
+ 
+}
+.container{
+    max-width: 17rem;
+    margin: 1rem;
+    background-color: var(--Very-dark-blue-card-BG);   
+    padding: 1.3rem;
+    border-radius: .8rem;
+ 
+}
+.container .image{
+    position: relative;
+    cursor: pointer;
+    border-radius: .5rem;
+
+
+}
+.container .image #mika{
+    background-color: var(--Cyan);
+    width: 100%;
+    height: 99%;
+    position: absolute;
+    opacity: .5;
+    border-radius: .5rem;
+    visibility: hidden;
+
+}
+.container .image #eth{
+    width: 100%;
+    border-radius: .5rem;   
+}
+
+.container .image:hover #mika{
+    visibility: visible;
+}
+.container .image:hover #eye{
+    visibility: visible;
+}
+.container .image #eye{
+    position: absolute;
+    right: 41%;
+    transform: translateX(50%);
+    top: 50%;
+    transform: translateY(-50%);
+    width: 3rem;
+    visibility: hidden;
+    
+ 
+}
+
+.container .main h1{
+    margin: 1rem 0;
+    font-weight: 600;
+    font-size: 1.5rem;
+    transition: all .2s ease-in-out;
+}
+.container .main h1:hover{
+    cursor: pointer;
+    color: var(--Cyan);
+}
+.container .main p{
+    margin-bottom: 1rem;   
+    color: var(--Soft-blue);
+}
+.container .icon{
+    display: flex;
+    justify-content: space-between;
+}
+.container .icon p:nth-child(1)::before{
+    content: url('../images/icon-ethereum.svg');
+    padding: .2rem;
+    vertical-align: middle;
+}
+.container .icon p:nth-child(1){
+    font-weight: 700;
+    color: var(--Cyan);
+    font-size: .9rem;
+
+}
+.container .icon p:nth-child(2)::before{
+    content: url('../images/icon-clock.svg');
+    padding: .2rem;
+    vertical-align: middle;
+}
+.container .icon p:nth-child(2){
+    font-weight: 400;
+    color: var(--Soft-blue);
+    font-size: .9rem;
+}
+.container hr{
+    border: .1px solid var(--Very-dark-blue-line);
+    margin: 1rem 0;
+}
+.container .avatar img{
+    width: 2.1rem;
+    vertical-align: middle;
+    border: 1px solid white;
+    border-radius: 3rem;
+}
+.container .avatar p{
+    display: inline-block;
+    margin: 0 1rem;
+    font-size: .9rem;
+    color: var(--Soft-blue);
+    font-weight: 500;
+    transition: all .2s ease-in-out ;
+}
+
+.container .avatar p span:hover{
+    color: var(--Cyan);
+    font-weight: bolder;
+    cursor: pointer;
+
+}
+
+
+
+
+
+.attribution { font-size: 16px; text-align: center; }
+ .attribution a { color: hsl(228, 45%, 44%); }

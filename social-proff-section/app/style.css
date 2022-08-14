@@ -1,0 +1,285 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;700&display=swap');
+@import url('/app/animation.css');
+html{
+    --Very-Dark-Magenta: hsl(300, 43%, 22%);
+    --Soft-Pink: hsl(333, 80%, 67%);
+    --Dark-Grayish-Magenta: hsl(303, 43%, 55%);
+    --Light-Grayish-Magenta: hsl(300, 24%, 96%);
+    --White: hsl(0, 0%, 100%);
+
+ }
+ body{
+    font-family: 'League Spartan', sans-serif;
+    background-color: var(--White);
+ }
+
+*{
+     margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 62.5%;
+    font-weight: 300;
+}
+
+ button{
+    all: unset;
+}
+ ul,li{
+    list-style: none;
+}
+
+         /* >>--------------------- text setting  ---------------------<<  */ 
+
+  
+.container{
+    display: grid;
+    min-height: 100vh;
+    place-items: center;
+}
+
+.container .text-wrap{
+    
+    margin: 2rem;
+    text-align: center;
+    max-width: 60rem;
+}
+.container .text-wrap h1{
+    font-size:clamp(4rem, 3.5440rem + 1.2161vw, 5.3rem);
+    font-weight: 700;
+    color: var(--Very-Dark-Magenta);
+    margin: 2rem 0;
+}
+.container .text-wrap p{
+    font-size: clamp(1.7rem, 1.6298rem + 0.1871vw, 1.9rem);
+    margin: 2rem .5rem;
+    line-height: 2rem;
+    color: rgb(162, 135, 163);
+    font-weight: 500;
+
+}
+
+@media screen and (min-width: 1110px){
+
+    .container .text-wrap{
+        max-width: 40rem;
+        text-align: left;
+    }
+
+}
+
+         /* >>--------------------- starr setting ---------------------<<  */ 
+
+ 
+
+.container .star-wrap{
+    /* visibility: hidden; */
+    margin: 4.4rem 2rem;
+    display: grid;
+    gap: 2rem;
+    width: 100%;
+    place-items: center;
+
+
+}
+.container .star-wrap .wrap{
+    width: 80%;
+    border-radius: .7rem;
+    padding: 1.5rem;
+    background-color: var(--Light-Grayish-Magenta);
+  
+}
+.container .star-wrap .wrap .stars{
+    display: flex;
+    gap: 1.1rem;
+    justify-content: center;
+    align-items: flex-end;
+}
+.container .star-wrap .wrap .text-content{
+     margin: 1.4rem 0 0 0 ;
+
+}
+.container .star-wrap .wrap .text-content p{
+
+    text-align: center;
+    font-size:1.6rem;
+    font-weight: 700;
+    color: var(--Very-Dark-Magenta);
+}
+@media screen and (min-width : 750px ){
+
+     .container .star-wrap{
+        grid-auto-flow: column;
+    }
+}
+
+
+@media screen and (min-width: 1110px){
+    .container .star-wrap{
+        grid-auto-flow: row;
+        transform: translateX(3rem);
+    }
+    .container .star-wrap .wrap{
+        width: 60%;
+        display: flex;
+        padding-left: 5rem;
+        align-items: center;
+        gap: 5rem;
+    }
+    .container .star-wrap .wrap .text-content{
+        transform: translateY(-.7rem);
+    }
+    .container .star-wrap .guru{
+        transform: translateX(5rem);
+    }
+    .container .star-wrap .bestTech{
+        transform: translateX(10rem);
+    }
+
+        .container .star-wrap .wrap[data-aos="fade-down"]:nth-child(1){
+            transform: translate(-5rem,0);
+            opacity: 0;
+            transition-property:transform,opacity ;
+        }
+        .container .star-wrap .wrap[data-aos="fade-down"]:nth-child(1).aos-animate{
+            transform: translateX(0rem);
+            opacity: 1;
+        }
+        .container .star-wrap .wrap[data-aos="fade-down"]:nth-child(2){
+            transform: translate(-5rem,0);
+            opacity: 0;
+            transition-property:transform,opacity ;
+        }
+        .container .star-wrap .wrap[data-aos="fade-down"]:nth-child(2).aos-animate{
+            transform: translateX(5rem);
+            opacity: 1;
+        }
+        .container .star-wrap .wrap[data-aos="fade-down"]:nth-child(3){
+            transform: translate(-5rem,0);
+            opacity: 0;
+            transition-property:transform,opacity ;
+        }
+        .container .star-wrap .wrap[data-aos="fade-down"]:nth-child(3).aos-animate{
+            transform: translateX(10rem);
+            opacity: 1;
+        }
+    
+}
+
+
+         /* >>--------------------- card setting ---------------------<<  */ 
+
+  
+
+/* .container .card-wrap {display: none;} */
+.container .card-wrap .card{
+    margin: 3rem;
+    background-color: var(--Very-Dark-Magenta);
+    color: white;
+    /* min-height: 20rem; */
+    border-radius:.8rem;
+    padding: 3.3rem;
+}
+.container .card-wrap .card img{
+    width: clamp(4rem, 3.4738rem + 1.4032vw, 5.5rem);
+    border-radius: 4rem;
+
+}
+.container .card-wrap .card .name{
+    display: inline-block;
+    vertical-align:top;
+    /* margin:.3rem 2.4rem; */
+    transform: translate(2.4rem,clamp(0.3rem, 0.1246rem + 0.4677vw, 0.8rem));
+    line-height: 1.8rem;
+}
+
+.container .card-wrap .card .name h1{
+    font-size: clamp(1.6rem, 1.4597rem + 0.3742vw, 2rem);
+    font-weight: 700;
+}
+.container .card-wrap .card .name h2{
+    font-size: 1.51rem;
+    color: var(--Dark-Grayish-Magenta);
+    font-weight: 700;
+    
+}
+.container .card-wrap .card p{
+    font-size: 1.67rem;
+    margin: 2.5rem 0 0 0 ;
+    font-weight: 500;
+    line-height: 2.3rem;
+}
+
+@media screen and (min-width: 750px ){
+    
+    .container .card-wrap {
+         
+        display: grid;
+        width: 70%;
+     }
+     .container .card-wrap .card{max-width: 53rem;}
+
+     .container .card-wrap .card:first-child{
+        place-self: start;
+     }
+     .container .card-wrap .card:nth-child(2){
+        place-self: end;
+     }
+     .container .card-wrap .card:last-child{
+        place-self: start;
+     }
+
+}
+
+@media screen and (min-width: 1110px){
+
+    .container .card-wrap{
+        display: flex;
+        width: 100%;
+    }
+    .container .card-wrap .card:nth-child(2){
+      transform: translateY(2rem);  
+    }
+    .container .card-wrap .card:last-child{
+        transform: translateY(4rem);
+    }
+
+
+    
+}
+
+
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+        }
+.attribution a {
+color: hsl(228, 45%, 44%);
+}
+
+/* dekstop */
+
+@media screen and (min-width: 1110px){
+
+    .container{
+        display: grid;
+        grid-template-areas: 
+        "text stars stars"
+        "card card card";
+        padding: 5rem;
+    }
+    .container .text-wrap{
+        
+        grid-area: text;
+        max-width: 40rem;
+        text-align: left;
+    }
+    .container .star-wrap{grid-area: stars;}
+
+    .container .card-wrap {grid-area: card;}
+    
+}
+
+
+
+

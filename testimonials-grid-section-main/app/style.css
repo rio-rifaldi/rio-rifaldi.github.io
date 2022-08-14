@@ -1,0 +1,229 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&display=swap');
+:root{
+
+    --Moderate-violet: hsl(263, 55%, 52%);
+    --Very-dark-grayish-blue: hsl(217, 19%, 35%);
+    --Very-dark-blackish-blue: hsl(219, 29%, 14%);
+    --White: hsl(0, 0%, 100%);
+    --Light-gray: hsl(0, 0%, 81%);
+    --Light-grayish-blue: hsl(210, 46%, 95%);
+
+}
+
+body{
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    background-color: var(--Light-grayish-blue);
+    
+
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+
+.container {
+ 
+    margin: 3rem 1.5rem;
+    display: grid;
+    gap: 3rem;
+}
+
+
+         /* >>--------------------- setup all card globaly ---------------------<<  */ 
+
+  
+.container section{
+    padding: 3rem 3rem;
+    border-radius: .8rem;
+
+}
+.container section header img{
+    border-radius: 10rem;
+    width: 5rem;
+
+}
+.container section header .name{
+    display: inline-block;
+    transform: translate(2rem,-1rem);
+    
+}
+.container section header .name h1{
+    font-size: 1.7rem;
+    line-height: 2.4rem;
+    font-weight: 700;
+}
+.container section header .name span{
+    font-size: 1.3rem;
+    font-weight: 300;
+}
+.container section main h1{
+    font-size: 2rem;
+    margin: 1.6rem 0;
+}
+
+.container  section main p{
+    font-size: 1.6rem;
+    color: rgba(255, 255, 255, .7);
+    font-weight: 700;
+    line-height: 2.3rem;
+}
+
+
+         /* >>--------------------- daniel card styling ---------------------<<  */ 
+
+.container  .daniel-card{
+    background-color: var(--Moderate-violet);
+    background-image: url(../images/bg-pattern-quotation.svg);
+    background-repeat: no-repeat;
+    background-position: 93% 0;
+}
+
+.container  .daniel-card header img{
+    outline: .49rem solid hsla(0, 0%, 81%,.3)
+}
+.container  .daniel-card header h1{
+    color: var(--White);
+}
+.container  .daniel-card header span{
+    color: rgba(255, 255, 255, .5);
+}
+.container  .daniel-card main h1{
+    margin: 1.8rem 0;
+    color: var(--White);
+}
+
+         /* >>--------------------- jonathan card ---------------------<<  */ 
+
+
+    .container .jonathan-card{
+        background-color: var(--Very-dark-grayish-blue) ;
+    }
+    .container .jonathan-card header h1{
+        color:var(--White);
+    }
+    .container .jonathan-card header span{
+        color: rgba(255, 255, 255, .5);
+    }
+    .container .jonathan-card main h1{
+        color:white;
+    }
+
+  
+
+             /* >>--------------------- jeanette card ---------------------<<  */ 
+    
+    .container .jeanette-card{
+        background-color: var(--White);
+    }
+    .container .jeanette-card header h1{
+        color: var(--Very-dark-grayish-blue);
+    }
+    .container .jeanette-card header span{
+        color: rgb(160, 160, 160);
+    }
+    .container .jeanette-card main h1{
+        color: var(--Very-dark-grayish-blue);
+    }
+    .container .jeanette-card main p{
+        color: rgb(160, 160, 160);
+    }
+    
+      
+             /* >>--------------------- patrick card ---------------------<<  */ 
+      
+.container .patrick-card{
+    background-color: var(--Very-dark-blackish-blue);
+}
+.container .patrick-card header h1{
+    color: white;
+}
+.container .patrick-card header span{
+    color: rgba(255, 255, 255, .5);
+}
+.container .patrick-card main h1{
+    color: var(--Light-grayish-blue);
+}
+
+         /* >>--------------------- kira card ---------------------<<  */  
+
+.container .kira-card{
+    background-color: var(--White);
+}
+.container .kira-card header h1{
+    color: var(--Very-dark-grayish-blue);
+
+}
+.container .kira-card header span{
+    color: rgb(160, 160, 160);
+}
+.container .kira-card main h1{
+    color: var(--Very-dark-grayish-blue);
+}
+.container .kira-card main p{
+    color: rgb(160, 160, 160);
+}
+
+
+         /* >>--------------------- tablet design ---------------------<<  */ 
+
+
+@media screen and (min-width : 768px ){
+     
+        .container{
+            grid-template-columns: repeat(2,1fr) ;
+        }
+        .container .jonathan-card{
+            grid-area: 1 / 1 / 2 / 3;
+        }
+     }
+         /* >>--------------------- dekstop design ---------------------<<  */ 
+
+    @media screen and (min-width : 1000px ){
+
+        .container{
+            grid-template-columns: repeat(4,1fr);
+            
+        }
+
+         .container .jonathan-card{
+            grid-area: unset
+        }
+        .container .daniel-card{
+            grid-area: 1 / 1 / 2 / 3;
+        }
+        .container .patrick-card{
+            grid-area: 2 / 2 / 3 / 4;
+        }
+        .container .kira-card{
+            grid-area:  1 / 4 / 3 /5;
+
+        }
+
+    }
+
+  
+     
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
