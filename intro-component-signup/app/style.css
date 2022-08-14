@@ -1,0 +1,324 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+:root {
+  --icon-error: url(../images/icon-error-pw.svg);
+  --icon-check: url(../images/icons8-checkmark.svg);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 62.5%;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background-image: url(../images/bg-intro-mobile.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: hsl(0deg, 100%, 74%);
+}
+
+.container {
+  margin: 7rem 2rem;
+  min-height: 100vh;
+}
+.container .text {
+  text-align: center;
+}
+.container .text h1 {
+  font-weight: 700;
+  font-size: clamp(2.6rem, 1.8521rem + 1.9943vw, 4.7rem);
+  color: white;
+}
+.container .text p {
+  font-weight: 500;
+  font-size: clamp(1.6rem, 1.5644rem + 0.095vw, 1.7rem);
+  margin: 2rem 0;
+  color: white;
+}
+.container .form {
+  margin: 5rem 0;
+}
+.container .form .header {
+  margin: 2rem 0;
+  display: grid;
+  place-items: center;
+  min-height: 8rem;
+  text-align: center;
+  background-color: hsl(248deg, 32%, 49%);
+  color: white;
+  padding: 0 5rem;
+  border-radius: 0.8rem;
+}
+.container .form .header h2 {
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+.container .form .header h2 mark {
+  font-size: 1.6rem;
+  font-weight: 600;
+  background-color: transparent;
+  color: white;
+  font-family: "Poppins", sans-serif;
+}
+.container .form form {
+  padding: 3rem;
+  background-color: white;
+  display: grid;
+  gap: 1.5rem;
+  border-radius: 0.7rem;
+  position: relative;
+}
+.container .form form div {
+  position: relative;
+}
+.container .form form div input {
+  width: 100%;
+  font-size: clamp(1.3rem, 1.1288rem + 0.1899vw, 1.4rem);
+  padding: 1rem 2.2rem;
+  border-radius: 0.5rem;
+  border: 1.4px solid rgba(128, 128, 128, 0.25);
+}
+.container .form form div input::placeholder {
+  font-weight: 600;
+  color: rgba(128, 128, 128, 0.5);
+  font-size: 1.2rem;
+}
+.container .form form div input:focus {
+  outline: 1.2px solid black;
+}
+.container .form form div input:not(:placeholder-shown):invalid ~ p {
+  max-height: 1.3rem;
+  opacity: 1;
+}
+.container .form form div p {
+  color: hsl(0deg, 100%, 74%);
+  text-align: right;
+  font-size: 1rem;
+  font-weight: 500;
+  text-transform: capitalize;
+  transition: all 0.3s ease;
+  max-height: 0;
+  opacity: 0;
+  pointer-events: none;
+}
+.container .form form div .error {
+  position: absolute;
+  right: 1.8rem;
+  top: 1.3rem;
+  display: none;
+}
+.container .form form div .eye {
+  position: absolute;
+  top: 1.2rem;
+  right: 1.8rem;
+  width: 2.5rem;
+  cursor: pointer;
+}
+.container .form form div input[type=checkbox] {
+  height: 3rem;
+  width: 3rem;
+  position: absolute;
+  right: 1.8rem;
+  top: 1.1rem;
+  z-index: 2;
+  opacity: 0;
+  cursor: pointer;
+}
+.container .form form div input[type=checkbox]:checked ~ .close {
+  display: none;
+}
+.container .form form div input[type=checkbox]:not(:checked) ~ .open {
+  display: none;
+}
+.container .form form div input#password:not(:placeholder-shown) ~ ul {
+  max-height: 5rem;
+  opacity: 1;
+  pointer-events: all;
+}
+.container .form form div ul {
+  list-style-type: none;
+  margin: 1rem;
+  font-size: clamp(1.5rem, 1.4595rem + 0.1081vw, 1.6rem);
+  color: hsl(0deg, 100%, 74%);
+  font-weight: 500;
+  transition: all 0.5s ease-in-out;
+  max-height: 0;
+  opacity: 0;
+  pointer-events: none;
+}
+.container .form form div ul li::after {
+  transform: translate(0.5rem, 0.3rem);
+  content: var(--icon-error);
+  display: inline-block;
+}
+.container .form form button {
+  min-height: 4.2rem;
+  background-color: hsl(154deg, 59%, 51%);
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  border-radius: 0.7rem;
+  border: none;
+  color: white;
+  box-shadow: 0px 1.5px 3px 0px rgba(0, 0, 0, 0.7);
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.container .form form button:hover {
+  background-color: rgb(0, 197, 0);
+}
+.container .form form button:focus {
+  background-color: rgb(0, 197, 0);
+  outline: none;
+}
+.container .form form p {
+  text-align: center;
+  font-size: 1.15rem;
+  font-weight: 500;
+  color: hsl(246deg, 25%, 77%);
+  line-height: 2.2rem;
+}
+.container .form form p span {
+  color: hsl(0deg, 100%, 74%);
+  font-size: 1.15rem;
+  font-weight: 700;
+}
+.container footer {
+  position: absolute;
+  bottom: 3rem;
+}
+.container footer p {
+  font-size: 1.2rem;
+  color: darkblue;
+  font-weight: 500;
+}
+.container footer p a {
+  text-decoration: none;
+  font-size: 1.2rem;
+}
+
+dialog.modal {
+  max-width: 33rem;
+  margin: auto;
+  border: unset;
+  padding: 3rem;
+  text-align: center;
+  gap: 4.4rem;
+  border-radius: 1rem;
+  background-color: #ffffff;
+}
+dialog.modal::backdrop {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+dialog.modal[open] {
+  animation: fade-in 1s ease forwards;
+}
+dialog.modal img {
+  width: 18rem;
+  display: block;
+  margin: auto;
+}
+dialog.modal section {
+  max-width: 32rem;
+  text-align: center;
+  margin: 2rem 0;
+}
+dialog.modal section h1 {
+  font-size: 1.7rem;
+  color: rgb(1, 1, 47);
+  text-transform: capitalize;
+}
+dialog.modal section p {
+  margin-top: 1rem;
+  font-size: 1.2rem;
+  color: rgb(106, 105, 109);
+  line-height: 2.1rem;
+}
+dialog.modal section p mark {
+  background-color: transparent;
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+dialog.modal button {
+  width: 15rem;
+  background-color: rgb(0, 182, 0);
+  padding: 0.8rem 2rem;
+  font-size: 1.3rem;
+  font-weight: 500;
+  cursor: pointer;
+  color: white;
+  border-radius: 1rem;
+  border: unset;
+  margin: unset;
+  transition: all 0.2s ease;
+}
+dialog.modal button:hover {
+  background-color: rgb(0, 220, 0);
+}
+
+body::-webkit-scrollbar {
+  width: 0.3rem;
+}
+
+@media screen and (min-width: 1000px) {
+  body {
+    background-image: url(../images/bg-intro-desktop.png);
+  }
+  .container {
+    margin: 0 4rem;
+    grid-auto-flow: column;
+    display: grid;
+    gap: 7rem;
+    place-items: center;
+  }
+  .container .text {
+    max-width: 45rem;
+  }
+  .container .text h1 {
+    text-align: left;
+  }
+  .container .text p {
+    text-align: justify;
+  }
+  .container .form {
+    margin: 0;
+    width: 88%;
+  }
+  dialog.modal {
+    max-width: 72rem;
+  }
+  dialog.modal img {
+    float: left;
+    width: 23rem;
+  }
+  dialog.modal h1 {
+    margin-top: 3rem;
+  }
+  dialog.modal section {
+    display: inline;
+    max-width: 30rem;
+  }
+  dialog.modal button {
+    margin-top: 2rem;
+  }
+}
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228deg, 45%, 44%);
+}
+
+/*# sourceMappingURL=style.css.map */

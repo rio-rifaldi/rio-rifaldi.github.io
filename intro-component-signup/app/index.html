@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content=" form input registration for trial version">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  <title>Frontend Mentor | Intro component with sign up form</title>
+
+</head>
+<body>
+  <main class="container">
+
+    <header class="text">
+      <h1>
+          Learn to code by watching others
+      </h1>
+      <p>
+          See how experienced developers solve problems in real-time. Watching scripted tutorials is great, 
+           but understanding how developers think is invaluable. 
+      </p>
+    </header>
+
+    <section class="form">
+          <nav class="header">
+            <h2>
+              <mark>Try it free 7 days </mark>then $20/mo. thereafter
+            </h2>
+          </nav>
+
+          <form action="">
+                <div>
+                  <input type="text"  placeholder="First Name" style="text-transform: capitalize;" >
+                  <img src="../images/icon-error.svg" alt="icon-error" class="error">
+                  <p>fist name cannot be empty</p>
+                </div>
+
+                <div>
+                  <input type="text"  placeholder="Last Name" style="text-transform: capitalize;">
+                  <img src="../images/icon-error.svg" alt="icon-error" class="error">
+                  <p>last name cannot be empty</p>
+                </div>
+
+                <div>
+                  <input type="email"  placeholder="Email Address">
+                  <img src="../images/icon-error.svg" alt="icon-error" class="error">
+                    <p>looks like this is not an email</p>
+                </div>
+                <div>
+                  <input type="password"  placeholder="Password" id="password">
+                  <p>password cannot be empty</p>
+                  <input type="checkbox" name="" >
+                  <img src="../images/eye-closed.svg" alt="" class="eye close">
+                <object data="../images/eye-open.svg" type="image/svg+xml" class="eye open"></object>
+                  <ul>
+                    <li>contain at least 1 upper letter</li>
+                    <li> contain at least 1 number</li>
+                    <li> contain at least 1 special character (! %^*) </li>
+                  </ul>
+                </div>
+                
+                  <button id="submit">Claim your free trial</button>
+                  <p> By clicking the button, you are agreeing to our <span>Terms and Services</span></p>
+          </form>
+
+        </section>
+        
+        <footer>
+          <p class="attribution">
+            Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+            Coded by <a href="#" target="_blank">Rio Rifaldi</a>.
+          </p>
+        </footer>
+      </main>
+   
+      <dialog class="modal" id="modal">
+        <img src="../images/Sending emails_Monochromatic.svg" alt="Sending email">
+        <section>
+          <h1>your email has been sent</h1>
+          <p>Thank you <mark id="name"></mark> . please be patients, we will send a verifcation register into <mark id="email"></mark> lest than 24 hour</p>
+        </section>
+        <button type="submit">close</button>
+      </dialog>
+  
+
+  <script src="script.js"></script>
+</body>
+</html>
